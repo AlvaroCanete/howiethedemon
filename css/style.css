@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family:CupheadVogue;
+    src: url(../Fonts/CupheadVogue-ExtraBold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: CupheadVogue;
+}
+
+.Grid {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px auto auto auto;
+}
+
+
+nav ul {
+    width: 100%;
+    height: 14rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
+    top: 0px;
+    background-color: white;
+    border-bottom: 5px solid black;
+}
+
+li {
+    list-style-type: none;
+    font-size: 40px;
+    text-decoration-line: none;
+}
+
+.enlaces {
+    margin-top: 5rem;
+}
+
+.nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    align-self: flex-start;
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(92, 224, 224);
+}
+
+.Banner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+    background-image: url(../img/645ac8d9-1087-4de9-8e9a-adedf9a4fde1\ 2.jpg);
+    background-size: cover;
+    height: 26rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    border-radius: 6rem;
+    grid-column: 1/1;
+    grid-row: 3/3;
+}
+
+.A__White {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    color:white;
+    height: auto;
+    width: 100%;
+    font-size: 5rem;
+    margin-top: 8rem;
+}
+
+.Transparencia {
+    background-color: rgba(0,0, 0, 0.6);
+    height: 26rem;
+    width: 100%;
+    border-radius: 6rem;
+    z-index: 0;
+}
+
+.Instagram {
+    margin: 3rem;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    
+}
+
+.Newsletter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row: 3/3;
+}
+
+.H2 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 100px;
+}
+
+.P {
+    padding-top: 5rem;
+    text-align: center;
+    margin: auto;
+    font-size: 50px;
+}
+
+.Input__Formulario {
+    text-align: center;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+}
+
+.Input__Email {
+    font-size: 40px;
+}
+
+.Input__Button {
+    width: 100%;
+    font-size: 30px;
+}
+
+.Footer{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    border-top: 5px solid black;
+    grid-column: 1/3;
+    grid-row: 5/6;
+}
+
+.P__Footer {
+    margin: 40px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
+}
+
+.Rs {
+    margin: 30px 50px 50px 0px;
+    text-align: end;
+}
+
+.Icon {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.Banner__Galeria {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+    text-align: center;
+    margin: 5%;
+    font-size: 80px;
+    grid-column: 1/1;
+    grid-row: 2/2;
+}
+
+.Fantasma {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 1rem;
+    margin: 1rem;
+    grid-column: 1/3;
+    grid-row: 2/2;
+
+}
+.Bomb {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    grid-column: 1/1;
+    grid-row: 3/3;
+}
+.Howie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    grid-column: 2/3;
+    grid-row: 3/3;
+
+}
+
+.Main__Info {
+    display: flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+
+.Foto {
+    width: 50%;
+    flex-wrap: wrap;
+    margin: 5rem 7rem 5rem 7rem;
+}
+
+.Texto {
+    width: 50%;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+    margin: 5rem 7rem 5rem 7rem;
+}
+
+.Info__Form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    font-size: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: space-between;
+    grid-column: 1/3;
+    grid-row: 3/3;
+}
+
+button {
+    width: 80px;
+    height: 40px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Description_Tiendas {
+    display: flex;
+    width: 100%;
+    grid-column: 1/3;
+    grid-row: 2/2;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+}
+
+.TiendaChopper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    align-items: center;
+    font-size: 60px;
+    grid-column: 1/3;
+    grid-row: 3/3;
+}
+
+.Worldwide__Enlace1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    grid-column: 1/1;
+    grid-row: 4/4;
+}
+
+
+.Worldwide__Enlace2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    grid-column: 2/3;
+    grid-row: 4/4;
+}
+
+.Trabajos__DIV {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 40px;
+    grid-column: 1/3;
+    grid-row: 2/2;
+}
+
+.Titulo__Trabajos1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    font-size: 20px;
+    grid-column: 1/1;
+    grid-row: 3/3;
+}
+.Titulo__Trabajos2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    font-size: 20px;
+    grid-column: 2/2;
+    grid-row: 3/3;
+}
+.Titulo__Trabajos3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    font-size: 20px;
+    grid-column: 1/(1);
+    grid-row: 4/4;
+}
+.Titulo__Trabajos4 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-right: auto;
+    font-size: 20px;
+    grid-column: 2/2;
+    grid-row: 4/4;
+}
+@media screen and (max-width: 480px) { 
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .Grid {
+        width: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .nav{
+        width: auto;
+        height: 5rem;
+        flex-direction: row;
+        align-items: center;
+        font-size: 20px;
+        max-height: 60px;
+        grid-column: 1/1;
+        grid-row: 1/1;
+    }
+    .Instagram {
+        width: auto;
+        margin-top: 3rem;
+        font-size: 20px;
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+    .Banner {
+        width: auto;
+        grid-column: 1/1;
+        grid-row: 3/3;
+    }
+
+    .A__White {
+        flex-direction: row;
+        justify-content: center;
+        font-size: 70px;
+    }
+    .Newsletter {
+        grid-column: 1/3;
+        grid-row: 4/4;
+    }
+
+    
+}
