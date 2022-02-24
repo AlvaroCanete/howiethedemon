@@ -5,7 +5,7 @@
 
 @font-face {
     font-family:CupheadVogue;
-    src: url(../Fonts/CupheadVogue-ExtraBold.ttf) format("truetype");
+    src: url(../fonts/CupheadVogue-ExtraBold.ttf) format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -63,10 +63,12 @@ li {
 a {
     text-decoration-line: none;
     color: black;
+    transition: transform 250ms ease-in-out;
 }
 
 a:hover {
     color: rgb(92, 224, 224);
+    transform: translateY(-10px);
 }
 
 .Banner{
@@ -183,6 +185,14 @@ a:hover {
     margin-right: 30px;
 }
 
+.Logo__Link {
+    transition: transform 250ms ease-in-out;
+}
+
+.Logo__Link:hover {
+    transform: translateY(-10px);
+}
+
 .Banner__Galeria {
     width: 100%;
     display: flex;
@@ -279,7 +289,10 @@ button {
     background-color: black;
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: transform 250ms ease-in-out;
+    will-change: auto;
 }
+
 
 .Description_Tiendas {
     display: flex;
