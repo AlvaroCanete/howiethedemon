@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -11,7 +12,7 @@
 }
 
 body {
-    font-family: CupheadVogue;
+    font-family: CupheadVogue, system-ui;
 }
 
 .Grid {
@@ -19,16 +20,19 @@ body {
     width: 100%;
     margin: 0 auto;
     gap: 5rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px auto auto auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, auto);
 }
 
+.Grid > * {
+    overflow: hidden;
+}
 
 nav ul {
     width: 100%;
-    height: 14rem;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     z-index: 1;
@@ -37,14 +41,15 @@ nav ul {
     border-bottom: 5px solid black;
 }
 
-li {
+.nav ul li {
     list-style-type: none;
     font-size: 40px;
     text-decoration-line: none;
 }
 
-.enlaces {
-    margin-top: 5rem;
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .nav {
@@ -54,7 +59,7 @@ li {
     align-self: flex-start;
     z-index: 1;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 1;
 
@@ -77,7 +82,7 @@ a:hover {
     flex-wrap: wrap;
     position: relative;
     z-index: 0;
-    background-image: url(../img/645ac8d9-1087-4de9-8e9a-adedf9a4fde1\ 2.jpg);
+    background-image: url(../img/645ac8d9-1087-4de9-8e9a-adedf9a4fde1-2.jpg);
     background-size: cover;
     height: 26rem;
     width: 100%;
@@ -85,7 +90,7 @@ a:hover {
     margin-top: 5rem;
     margin-left: 1rem;
     border-radius: 6rem;
-    grid-column: 1/1;
+    grid-column: 1/7;
     grid-row: 3/3;
 }
 
@@ -111,9 +116,9 @@ a:hover {
 
 .Instagram {
     margin: 3rem;
-    grid-column: 1/3;
+    grid-column: 1/13;
     grid-row: 2/3;
-    
+
 }
 
 .Newsletter {
@@ -121,8 +126,8 @@ a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-start: 7;
+    grid-column-end: 13;
     grid-row: 3/3;
 }
 
@@ -158,7 +163,6 @@ a:hover {
 }
 
 .Footer{
-    height: 200px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -166,7 +170,7 @@ a:hover {
     justify-content: center;
     text-align: center;
     border-top: 5px solid black;
-    grid-column: 1/3;
+    grid-column: 1/13;
     grid-row: 5/6;
 }
 
@@ -187,6 +191,8 @@ a:hover {
 
 .Logo__Link {
     transition: transform 250ms ease-in-out;
+    width: 5vh;
+    height: 5vh;
 }
 
 .Logo__Link:hover {
@@ -202,7 +208,7 @@ a:hover {
     text-align: center;
     margin: 5%;
     font-size: 80px;
-    grid-column: 1/1;
+    grid-column: 1/13;
     grid-row: 2/2;
 }
 
@@ -212,8 +218,8 @@ a:hover {
     justify-content: center;
     border-radius: 1rem;
     margin: 1rem;
-    grid-column: 1/3;
-    grid-row: 2/2;
+    grid-column: 1/13;
+    grid-row: 3/3;
 
 }
 .Bomb {
@@ -221,16 +227,16 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     margin: auto;
-    grid-column: 1/1;
-    grid-row: 3/3;
+    grid-column: 1/13;
+    grid-row: 2/2;
 }
 .Howie {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: auto;
-    grid-column: 2/3;
-    grid-row: 3/3;
+    grid-column: 1/13;
+    grid-row: 4/4;
 
 }
 
@@ -249,12 +255,12 @@ a:hover {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    grid-column: 1/3;
-    grid-row: 2/2;
+    grid-column: 1/13;
+    grid-row: 2/3;
 }
 
 .Foto {
-    width: 50%;
+    width: 100%;
     flex-wrap: wrap;
     margin: 5rem 7rem 5rem 7rem;
 }
@@ -262,7 +268,7 @@ a:hover {
 .Texto {
     width: 50%;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 20px;
     align-items: center;
     margin: 5rem 7rem 5rem 7rem;
 }
@@ -278,8 +284,8 @@ a:hover {
     margin-left: 5%;
     margin-right: 5%;
     justify-content: space-between;
-    grid-column: 1/3;
-    grid-row: 3/3;
+    grid-column: 1/13;
+    grid-row: 4/4;
 }
 
 button {
@@ -297,7 +303,7 @@ button {
 .Description_Tiendas {
     display: flex;
     width: 100%;
-    grid-column: 1/3;
+    grid-column: 1/13;
     grid-row: 2/2;
     flex-direction: column;
     flex-wrap: wrap;
@@ -313,7 +319,7 @@ button {
     width: auto;
     align-items: center;
     font-size: 60px;
-    grid-column: 1/3;
+    grid-column: 1/13;
     grid-row: 3/3;
 }
 
@@ -322,7 +328,7 @@ button {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    grid-column: 1/1;
+    grid-column: 1/7;
     grid-row: 4/4;
 }
 
@@ -331,7 +337,7 @@ button {
     display: flex;
     flex-direction: row;
     text-align: center;
-    grid-column: 2/3;
+    grid-column: 7/13;
     grid-row: 4/4;
 }
 
@@ -341,7 +347,7 @@ button {
     margin-top: 3rem;
     text-align: center;
     font-size: 40px;
-    grid-column: 1/3;
+    grid-column: 1/13;
     grid-row: 2/2;
 }
 
@@ -356,7 +362,7 @@ button {
     margin-bottom: 50px;
     margin-right: auto;
     font-size: 20px;
-    grid-column: 1/1;
+    grid-column: 1/7;
     grid-row: 3/3;
 }
 .Titulo__Trabajos2 {
@@ -370,7 +376,7 @@ button {
     margin-bottom: 50px;
     margin-right: auto;
     font-size: 20px;
-    grid-column: 2/2;
+    grid-column: 7/13;
     grid-row: 3/3;
 }
 .Titulo__Trabajos3 {
@@ -384,7 +390,7 @@ button {
     margin-bottom: 50px;
     margin-right: auto;
     font-size: 20px;
-    grid-column: 1/(1);
+    grid-column: 1/7;
     grid-row: 4/4;
 }
 .Titulo__Trabajos4 {
@@ -398,51 +404,189 @@ button {
     margin-bottom: 50px;
     margin-right: auto;
     font-size: 20px;
-    grid-column: 2/2;
+    grid-column: 7/13;
     grid-row: 4/4;
 }
-@media screen and (max-width: 480px) { 
-    img {
+@media screen and (max-width:480px) {
+    nav ul {
+        align-content: space-between;
+        justify-content: space-around;
+        margin: 0.1rem;
         width: 100%;
-        height: auto;
-    }
-    .Grid {
-        width: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    .nav{
-        width: auto;
-        height: 5rem;
-        flex-direction: row;
-        align-items: center;
-        font-size: 20px;
-        max-height: 60px;
-        grid-column: 1/1;
-        grid-row: 1/1;
-    }
-    .Instagram {
-        width: auto;
-        margin-top: 3rem;
-        font-size: 20px;
-        grid-column: 1/1;
-        grid-row: 2/2;
-    }
-    .Banner {
-        width: auto;
-        grid-column: 1/1;
-        grid-row: 3/3;
     }
 
-    .A__White {
-        flex-direction: row;
-        justify-content: center;
-        font-size: 70px;
+    .nav ul li {
+        font-size: 20px;
     }
+    .Grid {
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1rem 0;
+    }
+
+    .Grid > * {
+        padding: 1rem;
+    }
+
+    .nav {
+        height: auto;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        padding: 0;
+    }
+
+    .nav .logo__img img {
+        height: 90px;
+    }
+
+    .H2 {
+        font-size: 50px;
+    }
+
+    .P {
+        font-size: 25px;
+    }
+    .Instagram {
+        grid-column: 1/7;
+        margin: 0;
+    }
+    .Banner {
+        grid-column: 1/7;
+        grid-row: 3/3;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        padding: 0;
+        height: auto;
+    }
+
+    .Transparencia {
+        height: auto;
+    }
+
+    .Banner .A__White{
+        font-size: 3rem;
+        margin-top: 0;
+        padding: 2rem;
+    }
+
     .Newsletter {
-        grid-column: 1/3;
+        grid-column: 1/7;
+        grid-row: 4/4;
+        width: 100%;
+    }
+
+    .Newsletter .Input__Formulario > * {
+        width: 100%;
+    }
+
+    .Footer{
+        grid-column: 1/7;
+        grid-row: 5/5;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+
+    .P__Footer {
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    .P__Footer.copyright {
+        margin-top: 2rem;
+    }
+
+    .Rs {
+        margin: 0;
+    }
+
+    .Trabajos__DIV {
+        grid-column: 1/7;
+        grid-row: 2/2;
+        font-size: 20px;
+    }
+    .Titulo__Trabajos1 {
+        grid-column: 1/4;
+        grid-row: 3/3;
+        margin: 0%;
+    }
+    .Titulo__Trabajos2 {
+        grid-column: 4/7;
+        grid-row: 3/3;
+        margin: 0%;
+    }
+
+    .Titulo__Trabajos3 {
+        grid-column: 1/4;
         grid-row: 4/4;
     }
 
-    
+    .Titulo__Trabajos4 {
+        grid-column: 4/7;
+        grid-row: 4/4;
+    }
+    .Banner__Galeria {
+        font-size: 20px;
+        grid-column: 2/6;
+        grid-row: 2/2;
+    }
+
+    .Bomb {
+        grid-column: 1/7;
+        grid-row: 2/2;
+    }
+
+    .Fantasma {
+        grid-column: 1/7;
+        grid-row: 3/3;
+    }
+
+    .Howie {
+        grid-column: 1/7;
+        grid-row: 4/4
+    }
+
+    .Description_Tiendas {
+        font-size: 20px;
+        grid-column: 1/7;
+        grid-row: 2/2;
+    }
+    .TiendaChopper {
+        font-size: 20px;
+        grid-column: 1/7;
+        grid-row: 3/3;
+    }
+    .Worldwide__Enlace1 {
+        grid-column: 1/4;
+        grid-row: 4/4;
+    }
+    .Worldwide__Enlace2 {
+        grid-column: 4/7;
+        grid-row: 4/4;
+    }
+    .Card {
+        grid-column: 1/7;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0%;
+    }
+    .Foto {
+        width: 100%;
+        margin: 0%;
+    }
+
+    .Texto {
+        width: 100%;
+        font-size: 20px;
+        margin: 4% 0% 2% 0%;
+    }
+    .Info__Form {
+        grid-column: 1/7;
+        grid-row: 3/3;
+        font-size: 10px;
+        margin: 2%;
+    }
 }
